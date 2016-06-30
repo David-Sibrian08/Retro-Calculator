@@ -22,6 +22,7 @@
 		5C95E2E01D25AF8B00D44A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C95E2E31D25AF8B00D44A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C95E2E51D25AF8B00D44A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C95E2EB1D25DBF900D44A9B /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		5C95E2D81D25AF8B00D44A9B /* Retro Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				5C95E2EB1D25DBF900D44A9B /* Minecraft.ttf */,
 				5C95E2D91D25AF8B00D44A9B /* AppDelegate.swift */,
 				5C95E2DB1D25AF8B00D44A9B /* ViewController.swift */,
 				5C95E2DD1D25AF8B00D44A9B /* Main.storyboard */,
@@ -125,6 +127,7 @@
 			files = (
 				5C95E2E41D25AF8B00D44A9B /* LaunchScreen.storyboard in Resources */,
 				5C95E2E11D25AF8B00D44A9B /* Assets.xcassets in Resources */,
+				5C95E2EC1D25DBF900D44A9B /* Minecraft.ttf in Resources */,
 				5C95E2DF1D25AF8B00D44A9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +292,7 @@
 				5C95E2EA1D25AF8B00D44A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
