@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     var buttonSound: AVAudioPlayer!
     
     var result = ""
-    var runningNumber = ""
+    var runningNumber = "0"
     var leftValue = ""
     var rightValue = ""
     var currentOperation: Operation = .Empty
@@ -85,6 +85,19 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func clearButtonPressed(sender: UIButton) {
+        playSound()
+        result = ""
+        runningNumber = "0"
+        leftValue = ""
+        rightValue = ""
+        currentOperation = .Empty
+        
+        outputLabel.text = "0"
+        
+    }
+    
+    
     func processOperation(op: Operation) {
         playSound()
         
@@ -125,7 +138,6 @@ class ViewController: UIViewController {
         }
         buttonSound.play()
     }
-
-
+    
 }
 
