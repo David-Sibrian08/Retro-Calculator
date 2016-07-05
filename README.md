@@ -15,7 +15,7 @@ Created by David Sibrian
 All graphical content provided by [Mark Price](https://www.udemy.com/user/mark-price-2/) from [Devslopes](http://devslopes.com) 
 
 ## Screenshots
-Below are screenshots of the launch screen and user interface
+Below are screenshots of the launch screen and user interface </br>
 ![alt tag](https://github.com/David-Sibrian08/RetroCalculator/blob/master/Screenshots/LaunchScreen.png?raw=true)
 ![alt tag](https://github.com/David-Sibrian08/RetroCalculator/blob/master/Screenshots/UserInterface.png?raw=true)
 
