@@ -35,14 +35,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //1: Grab the path of the file
-        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        let path = Bundle.main.path(forResource: "btn", ofType: "wav")
         
         //2: Create the URL that the audio player will use
-        let soundURL = NSURL(fileURLWithPath: path!)
+        let soundURL = URL(fileURLWithPath: path!)
         
         //3: Assign the player to the button sound
         do {
-            try buttonSound = AVAudioPlayer(contentsOfURL: soundURL)
+            try buttonSound = AVAudioPlayer(contentsOf: soundURL)
             buttonSound.prepareToPlay()
         } catch let error as NSError {
             print(error.debugDescription)
@@ -57,35 +57,35 @@ class ViewController: UIViewController {
     
     //Making an IBAction for every number button is not ideal.
     //Change the tag for each button
-    @IBAction func numberKeyPressed(button: UIButton!) {
+    @IBAction func numberKeyPressed(_ button: UIButton!) {
         playSound()
         
         runningNumber += "\(button.tag)"
         outputLabel.text = runningNumber
     }
     
-    @IBAction func divideButtonPressed(sender: UIButton) {
+    @IBAction func divideButtonPressed(_ sender: UIButton) {
         processOperation(Operation.Divide)
         
     }
     
-    @IBAction func multiplyButtonPressed(sender: UIButton) {
+    @IBAction func multiplyButtonPressed(_ sender: UIButton) {
         processOperation(Operation.Multiply)
     }
     
-    @IBAction func subtractButtonPressed(sender: UIButton) {
+    @IBAction func subtractButtonPressed(_ sender: UIButton) {
         processOperation(Operation.Subtract)
     }
     
-    @IBAction func addButtonPressed(sender: UIButton) {
+    @IBAction func addButtonPressed(_ sender: UIButton) {
         processOperation(Operation.Add)
     }
     
-    @IBAction func equalsButtonPressed(sender: UIButton) {
+    @IBAction func equalsButtonPressed(_ sender: UIButton) {
         processOperation(currentOperation)
     }
     
-    @IBAction func clearButtonPressed(sender: UIButton) {
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
         playSound()
         result = ""
         runningNumber = "0"
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     }
     
     
-    func processOperation(op: Operation) {
+    func processOperation(_ op: Operation) {
         playSound()
         
         if currentOperation != .Empty {
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-        if buttonSound.playing {
+        if buttonSound.isPlaying {
             buttonSound.stop()
         }
         buttonSound.play()
